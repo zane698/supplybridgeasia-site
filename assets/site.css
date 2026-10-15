@@ -21,7 +21,7 @@ section{padding:72px 0;border-bottom:1px solid var(--line)}
 section.alt{background:var(--bg)}
 .lead{font-size:18px;color:#33405A;max-width:760px}
 .hero{padding:0;border:0;position:relative;background:var(--navy2);color:#fff}
-.hero .bg{position:absolute;inset:0;background:url(web_tf_line.jpg) center 45%/cover;opacity:.45}
+.hero .bg{position:absolute;inset:0;background:url(tf_workshop.jpg) center 40%/cover;opacity:.45}
 .hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,27,61,.95) 0%,rgba(11,27,61,.75) 55%,rgba(11,27,61,.35) 100%)}
 .hero .wrap{position:relative;padding-top:88px;padding-bottom:80px}
 .hero h1{color:#fff;max-width:760px}
