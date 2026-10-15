@@ -11,7 +11,7 @@
 ## 文件
 - index.html 首页；company.html 公司页；quote.html 询价页；privacy.html / terms.html
 - assets/site.css 样式（藏青 #13285A、金 #E9A63A）；assets/ 图片视频
-- downloads/Supply_Bridge_Asia_Company_Profile_2026.pdf 公司 PDF（9 页，发电机组封面版）
+- downloads/Supply_Bridge_Asia_Company_Profile_2026.pdf 公司 PDF（5 页，变压器+柴发版，2026-10-16 重做；源文件为 HTML 打印，改内容时与网站同步）
 - CNAME（supplybridgeasia.com）和 .nojekyll 不要删
 
 ## 规则
