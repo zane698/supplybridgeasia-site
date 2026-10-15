@@ -63,3 +63,34 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .menu{display:none}
 @media(max-width:900px){.g3,.g4{grid-template-columns:1fr 1fr}.nav ul{display:none}.menu{display:block}}
 @media(max-width:620px){.g2,.g3,.g4{grid-template-columns:1fr}section{padding:52px 0}.hero .wrap{padding-top:56px;padding-bottom:52px}.nav .btn:not(.menu){display:none}.menu{padding:8px 14px;font-size:14px}table{font-size:13.5px}th,td{padding:9px 8px;white-space:nowrap}th{font-size:10.5px;white-space:normal}}
+/* 2026-10 Maddox-style sections */
+.hl{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:38px;max-width:900px}
+.hl a{display:block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:14px 16px;color:#fff;text-decoration:none}
+.hl a:hover{background:rgba(255,255,255,.14)}
+.hl b{display:block;font-size:15.5px}.hl span{display:block;font-size:13.5px;color:#C9D6EE;margin-top:3px}
+.prod a.card{text-decoration:none;color:inherit;transition:border-color .15s}
+.prod a.card:hover{border-color:var(--navy)}
+.prod .rng{font-size:22px;font-weight:700;color:var(--navy);margin:2px 0 8px;font-variant-numeric:tabular-nums}
+.badges{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.badges span{background:var(--navy);color:#C9D6EE;border-radius:10px;padding:14px 16px;font-size:13.5px}
+.badges b{display:block;color:#fff;font-size:20px;margin-bottom:2px}
+.num i{display:flex;width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--navy2);font-style:normal;font-weight:800;align-items:center;justify-content:center;margin-bottom:12px}
+.promise{display:flex;gap:20px;align-items:center;justify-content:space-between;margin-top:22px;border-left:4px solid var(--gold)}
+.promise .btn{flex:none}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.calc label{display:block;font-size:13.5px;font-weight:600;color:var(--mute);margin-bottom:12px}
+.calc input,.calc select{display:block;width:100%;margin-top:5px;font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+.calc .co{background:var(--bg);border-radius:10px;padding:18px}
+.calc .co div{padding:8px 0;border-bottom:1px solid var(--line)}
+.calc .co span{display:block;font-size:13px;color:var(--mute)}
+.calc .co b{font-size:20px;color:var(--navy);font-variant-numeric:tabular-nums}
+.calc .co .btn{margin-top:14px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:10px}
+.faq summary{cursor:pointer;padding:16px 18px;font-weight:600;color:var(--navy);list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";float:right;color:var(--mute);font-weight:400}
+.faq details[open] summary:after{content:"–"}
+.faq details p{padding:0 18px 16px;font-size:15px;color:#33405A}
+@media(max-width:900px){.badges{grid-template-columns:1fr 1fr}.hl{grid-template-columns:1fr}}
+@media(max-width:620px){.calc{grid-template-columns:1fr}.promise{flex-direction:column;align-items:flex-start}.badges{grid-template-columns:1fr 1fr}.badges b{font-size:17px}}
+@media(max-width:620px){.kv td{white-space:normal}.kv td:first-child{width:38%}}

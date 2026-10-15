@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Request a quote | Supply Bridge Asia</title>
-<meta name="description" content="Build your enquiry for 1,000–1,500 kW diesel generator sets or 11/33 kV transformers in one minute and send it by WhatsApp or email. Reply within one working day.">
+<meta name="description" content="Build your enquiry for transformers, substations, switchgear or 100–1,500 kW diesel generator sets in about one minute. We typically reply within 24 hours.">
 <link rel="icon" href="assets/favicon.png">
 <link rel="stylesheet" href="assets/site.css">
 <style>
@@ -31,13 +31,13 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-col
 </head><body>
 <header><div class="wrap nav">
   <a class="logo" href="index.html"><img src="assets/logo_h.png" alt="Supply Bridge Asia"></a>
-  <ul><li><a href="index.html#gensets">Generator sets</a></li><li><a href="index.html#transformers">Transformers</a></li><li><a href="index.html#evidence">Evidence</a></li><li><a href="index.html#order">How an order works</a></li><li><a href="company.html">Company</a></li></ul>
+  <ul><li><a href="index.html#products">Products</a></li><li><a href="index.html#process">How it works</a></li><li><a href="index.html#sizing">Sizing tool</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="company.html">Company</a></li></ul>
   <a class="btn" href="https://wa.me/8617757312044">WhatsApp</a>
 </div></header>
 
 <section class="alt"><div class="wrap">
   <div class="kick">Request a quote · about one minute</div>
-  <h2>Tell us what you need. We reply within one working day.</h2>
+  <h2>Tell us what you need. We typically reply within 24 hours.</h2>
   <p class="lead">Choose the equipment, quantity and destination. Your enquiry is written out on the right; send it by WhatsApp or email. Nothing is stored on this page.</p>
 
   <div class="q">
@@ -48,6 +48,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-col
         <label><input type="radio" name="prod" value="gs" checked><span>Diesel generator sets</span></label>
         <label><input type="radio" name="prod" value="tf"><span>Transformers</span></label>
         <label><input type="radio" name="prod" value="both"><span>Both</span></label>
+        <label><input type="radio" name="prod" value="oth"><span>Substation / switchgear / other</span></label>
       </div>
     </fieldset>
 
@@ -55,12 +56,12 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-col
       <legend>Generator sets</legend>
       <div class="row">
         <label>Rating (prime / standby)<select name="gsRating">
-          <option>1,000 / 1,100 kW</option><option>1,500 / 1,650 kW</option><option>Other (100 kW – 2 MW)</option></select></label>
+          <option>100 kW</option><option>300 kW</option><option>500 kW</option><option selected>1,000 / 1,100 kW</option><option>1,500 / 1,650 kW</option><option>Other (state in notes)</option></select></label>
         <label>Engine<select name="gsEngine">
-          <option>Yuchai</option><option>Weichai</option><option>Cummins</option><option>Best price, any of the three</option></select></label>
+          <option>Weichai</option><option>Yuchai</option><option>Shangchai</option><option>Cummins</option><option>Best price, any make</option></select></label>
       </div>
       <div class="row">
-        <label>Build<select name="gsBuild"><option>Open frame</option><option>40 ft containerized, silent</option></select></label>
+        <label>Build<select name="gsBuild"><option>Open frame</option><option>Silent canopy</option><option>40 ft containerized, silent</option></select></label>
         <label>Voltage / frequency<select name="gsVolt"><option>400 V / 50 Hz</option><option>480 V / 60 Hz</option><option>Other (state in notes)</option></select></label>
       </div>
       <div class="row">
@@ -118,7 +119,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-col
       <a class="btn" id="sendMail" href="#">Send by email</a>
       <button class="btn ghost" id="copy" type="button">Copy</button>
     </div>
-    <p class="ok">Reply within one working day with availability, lead time and price. Balance is paid only after you review the factory test evidence.</p>
+    <p class="ok">We typically reply within 24 hours with price, data sheet and lead time. Balance is paid only after you review the factory test evidence.</p>
   </div>
   </div>
 </div></section>
@@ -127,15 +128,17 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-col
 
 <script>
 (function(){
+  try{var q=new URLSearchParams(location.search).get('size');if(q){var n=document.querySelector('[name=notes]');n.value='Sizing tool suggestion: '+q;document.querySelector('input[name=prod][value=both]').checked=true}}catch(e){}
   var f=document.getElementById('f'),pv=document.getElementById('preview'),miss=document.getElementById('miss');
   var wa=document.getElementById('sendWa'),ml=document.getElementById('sendMail'),cp=document.getElementById('copy');
   var gsBox=document.getElementById('gsBox'),tfBox=document.getElementById('tfBox');
   function v(n){var e=f.elements[n];return e?String(e.value||'').trim():''}
   function build(){
     var p=f.querySelector('input[name=prod]:checked').value;
-    gsBox.classList.toggle('hide',p==='tf');tfBox.classList.toggle('hide',p==='gs');
+    gsBox.classList.toggle('hide',p==='tf'||p==='oth');tfBox.classList.toggle('hide',p==='gs'||p==='oth');
     var L=['Quote request – Supply Bridge Asia',''];
-    if(p!=='tf'){
+    if(p==='oth'){L.push('OTHER EQUIPMENT (see notes)');L.push('')}
+    if(p==='gs'||p==='both'){
       L.push('DIESEL GENERATOR SETS');
       L.push('- Rating: '+v('gsRating'));
       L.push('- Engine: '+v('gsEngine'));
@@ -146,7 +149,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-col
       if(v('gsExtra'))L.push('- Extras: '+v('gsExtra'));
       L.push('');
     }
-    if(p!=='gs'){
+    if(p==='tf'||p==='both'){
       L.push('TRANSFORMERS');
       L.push('- Rating: '+v('tfKva'));
       L.push('- Voltage: '+v('tfHv')+' / '+(v('tfLv')||'?'));
