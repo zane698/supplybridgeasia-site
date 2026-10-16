@@ -94,3 +94,4 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 @media(max-width:900px){.badges{grid-template-columns:1fr 1fr}.hl{grid-template-columns:1fr}}
 @media(max-width:620px){.calc{grid-template-columns:1fr}.promise{flex-direction:column;align-items:flex-start}.badges{grid-template-columns:1fr 1fr}.badges b{font-size:17px}}
 @media(max-width:620px){.kv td{white-space:normal}.kv td:first-child{width:38%}}
+.grid>*{min-width:0}select{max-width:100%}
