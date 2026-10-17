@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Instant delivered price estimate for generator sets | Supply Bridge Asia</title>
-<meta name="description" content="Get an instant indicative FOB and CIF price for 50 kVA to 1,500 kW generator sets to Durban, Mombasa, Jebel Ali, Jeddah and Chittagong.">
+<title>Instant price estimate for generator sets, transformers and panels | Supply Bridge Asia</title>
+<meta name="description" content="Instant indicative FOB price for generator sets, 11 kV and 33 kV transformers, ATS and switchgear from China, with CIF to Durban, Mombasa, Jebel Ali, Jeddah and Chittagong for generator sets.">
 <link rel="canonical" href="https://supplybridgeasia.com/estimate.html">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Supply Bridge Asia">
-<meta property="og:title" content="Instant delivered price estimate for generator sets | Supply Bridge Asia"><meta property="og:description" content="Get an instant indicative FOB and CIF price for 50 kVA to 1,500 kW generator sets to Durban, Mombasa, Jebel Ali, Jeddah and Chittagong.">
+<meta property="og:title" content="Instant price estimate for generator sets, transformers and panels | Supply Bridge Asia"><meta property="og:description" content="Instant indicative FOB price for generator sets, 11 kV and 33 kV transformers, ATS and switchgear from China, with CIF to Durban, Mombasa, Jebel Ali, Jeddah and Chittagong for generator sets.">
 <meta property="og:url" content="https://supplybridgeasia.com/estimate.html"><meta property="og:image" content="https://supplybridgeasia.com/assets/gs_6.jpg">
 <link rel="icon" href="assets/favicon.png">
 <link rel="stylesheet" href="assets/site.css">
@@ -24,54 +24,65 @@
 </div></header>
 <section class="alt"><div class="wrap">
 <div class="kick">Instant estimate</div><h1 style="font-size:clamp(28px,4vw,42px)">Delivered price in 10 seconds</h1>
-<p class="lead" style="margin-top:12px">Pick a generator set, quantity and port. You see an indicative FOB and CIF price straight away. Then send it to us and we confirm a written quotation the same business day.</p>
+<p class="lead" style="margin-top:12px">Pick a product, quantity and port. You see an indicative price straight away, no sign-up. If it suits you, send it to us by email or WhatsApp and we reply with a written quotation within 24 hours.</p>
 <div class="grid g2" style="margin-top:26px;align-items:start">
 <div class="card">
-<label style="display:block;font-weight:600;margin-bottom:12px">Generator set<select id="p" style="display:block;width:100%;margin-top:6px;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit"></select></label>
+<label style="display:block;font-weight:600;margin-bottom:12px">Product<select id="p" style="display:block;width:100%;margin-top:6px;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit"></select></label>
 <label style="display:block;font-weight:600;margin-bottom:12px">Quantity<input id="q" type="number" min="1" value="1" style="display:block;width:100%;margin-top:6px;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit"></label>
 <label style="display:block;font-weight:600;margin-bottom:12px">Destination port<select id="d" style="display:block;width:100%;margin-top:6px;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit"></select></label>
-<p class="note">Other equipment (transformers, switchgear, Perkins or Cummins sets) and other ports: <a href="quote.html">request a quote</a>.</p>
+<p class="note">Not listed (dry-type transformers, compact substations, other ratings or ports)? <a href="quote.html">Request a quote</a>.</p>
 </div>
 <div class="card">
 <div class="tbl"><table id="out"></table></div>
 <div class="price" id="tot" style="margin-top:16px"></div>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px"><a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">Confirm by WhatsApp</a><a class="btn" id="ml" href="#">Confirm by email</a></div>
-<p class="note">Indicative only, not an offer. Equipment prices dated 16 Oct 2026, valid 30 days. Freight uses recent forwarder rates from Shanghai/Qingdao and changes weekly; insurance 0.3%; destination charges, duties and taxes are not included. Your written quotation is final.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px"><a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">Get written quotation by WhatsApp</a><a class="btn" id="ml" href="#">Get written quotation by email</a></div>
+<p class="note">Indicative only, not an offer. Each equipment price is valid 30 days from its price date. Freight uses recent forwarder rates from Shanghai/Qingdao and changes weekly; insurance 0.3%; destination charges, duties and taxes are not included. Your written quotation is final.</p>
 </div></div></div></section>
 <script>
 (function(){
-var P=[
- ["50 kVA Weichai, silent canopy",3990,"s"],["50 kVA Yuchai, silent canopy",4790,"s"],
- ["1,000 kW Yuchai, open frame",75000,"l"],["1,000 kW Shangchai, open frame",68500,"l"],
- ["1,500 kW Shangchai, open frame",142000,"x"],["1,500 kW Weichai, open frame",143000,"x"]];
 var D=[["Durban, South Africa",5100,6500],["Mombasa, Kenya",3700,5500],["Jebel Ali, UAE",7800,8800],["Jeddah, Saudi Arabia",6800,9500],["Chittagong, Bangladesh",2850,3350]];
-var ORIGIN=350;
+var ORIGIN=350,P=[],G={gen:"Generator sets",tf:"Transformers",panel:"Switchgear and panels"};
 function $(i){return document.getElementById(i)}
-P.forEach(function(x,i){var o=document.createElement('option');o.value=i;o.textContent=x[0]+' – from US$ '+x[1].toLocaleString('en-US');$('p').appendChild(o)});
-D.forEach(function(x,i){var o=document.createElement('option');o.value=i;o.textContent=x[0];$('d').appendChild(o)});
 function f(n){return 'US$ '+Math.round(n).toLocaleString('en-US')}
 function freight(k,q,d){
   if(k==='s'){ if(q<=3) return {c:q*750,t:q+' × shared container (LCL)'};
     var hc=Math.floor(q/10),r=q-hc*10,c=hc*d[2],t=hc?hc+' × 40 ft HC':'';
     if(r>0){ if(r<=4){c+=d[1];t+=(t?' + ':'')+'1 × 20 ft'} else {c+=d[2];t+=(t?' + ':'')+'1 × 40 ft HC'} }
     return {c:c+ORIGIN*Math.ceil(q/10),t:t}; }
+  if(k==='m') return {c:q*(d[1]+ORIGIN),t:q+' × 20 ft (one set each)'};
   if(k==='l') return {c:q*(d[2]+ORIGIN),t:q+' × 40 ft HC (one set each)'};
-  return {c:q*(d[2]*1.4+ORIGIN),t:q+' × 40 ft flat rack (estimate)'};
+  if(k==='x') return {c:q*(d[2]*1.4+ORIGIN),t:q+' × 40 ft flat rack (estimate)'};
+  return null;
 }
 function calc(){
-  var p=P[$('p').value],q=Math.max(1,parseInt($('q').value)||1),d=D[$('d').value];
-  var fob=p[1]*q,fr=freight(p[2],q,d),ins=(fob+fr.c)*0.003,cif=fob+fr.c+ins;
-  $('out').innerHTML='<tr><th>Item</th><th>Estimate</th></tr>'+
-   '<tr><td>'+p[0]+' × '+q+'</td><td>'+f(fob)+' FOB</td></tr>'+
-   '<tr><td>Ocean freight to '+d[0].split(',')[0]+'<br><span class="note">'+fr.t+'</span></td><td>'+f(fr.c)+'</td></tr>'+
-   '<tr><td>Insurance</td><td>'+f(ins)+'</td></tr>';
-  $('tot').innerHTML=f(cif)+' CIF<small>'+d[0]+' · about '+f(cif/q)+' per unit</small>';
-  var txt='Estimate request – Supply Bridge Asia\n- '+p[0]+'\n- Quantity: '+q+'\n- Port: '+d[0]+'\n- Web estimate: '+f(fob)+' FOB, '+f(cif)+' CIF\nPlease confirm a written quotation.';
-  $('wa').href='https://wa.me/8617757312044?text='+encodeURIComponent(txt);
-  $('ml').href='mailto:zane@supplybridgeasia.com?subject='+encodeURIComponent('Quotation request – '+p[0])+'&body='+encodeURIComponent(txt);
+  var p=P[$('p').value];if(!p)return;
+  var q=Math.max(1,parseInt($('q').value)||1),d=D[$('d').value];
+  var fob=p.usd*q,fr=freight(p.fc,q,d),rows='<tr><th>Item</th><th>Estimate</th></tr><tr><td>'+p.name+' × '+q+'<br><span class="note">'+p.spec+' · lead time '+p.lead+'</span></td><td>'+f(fob)+' FOB</td></tr>',txt;
+  if(fr){var ins=(fob+fr.c)*0.003,cif=fob+fr.c+ins;
+    rows+='<tr><td>Ocean freight to '+d[0].split(',')[0]+'<br><span class="note">'+fr.t+'</span></td><td>'+f(fr.c)+'</td></tr><tr><td>Insurance</td><td>'+f(ins)+'</td></tr>';
+    $('tot').innerHTML=f(cif)+' CIF<small>'+d[0]+' · about '+f(cif/q)+' per unit</small>';
+    txt='- Web estimate: '+f(fob)+' FOB, '+f(cif)+' CIF';
+  } else {
+    rows+='<tr><td>Ocean freight to '+d[0].split(',')[0]+'</td><td>in your quotation</td></tr>';
+    $('tot').innerHTML=f(fob)+' FOB<small>Freight depends on size and weight; we add it in your written quotation</small>';
+    txt='- Web estimate: '+f(fob)+' FOB';
+  }
+  $('out').innerHTML=rows;
+  var body='Quotation request – Supply Bridge Asia\n- '+p.name+' ('+p.spec+')\n- Quantity: '+q+'\n- Port: '+d[0]+'\n'+txt+'\nPlease send a written quotation.';
+  $('wa').href='https://wa.me/8617757312044?text='+encodeURIComponent(body);
+  $('ml').href='mailto:zane@supplybridgeasia.com?subject='+encodeURIComponent('Quotation request – '+p.name)+'&body='+encodeURIComponent(body);
 }
-['p','q','d'].forEach(function(i){$(i).addEventListener('input',calc);$(i).addEventListener('change',calc)});calc();
+D.forEach(function(x,i){var o=document.createElement('option');o.value=i;o.textContent=x[0];$('d').appendChild(o)});
+fetch('assets/prices.json').then(function(r){return r.json()}).then(function(j){
+  P=j.items;var want=new URLSearchParams(location.search).get('p'),sel=0;
+  ['gen','tf','panel'].forEach(function(c){var og=document.createElement('optgroup');og.label=G[c];
+    P.forEach(function(x,i){if(x.cat!==c)return;var o=document.createElement('option');o.value=i;o.textContent=x.name+' – from '+f(x.usd);og.appendChild(o);if(x.id===want)sel=i});
+    $('p').appendChild(og)});
+  $('p').value=sel;calc();
+}).catch(function(){$('out').innerHTML='<tr><td>Prices could not load. Please see <a href="products/">Products &amp; prices</a>.</td></tr>'});
+['p','q','d'].forEach(function(i){$(i).addEventListener('input',calc);$(i).addEventListener('change',calc)});
 })();
 </script>
 <footer><div class="wrap"><span>© 2026 Hangzhou Supply Bridge Asia Supply Chain Co., Ltd. · Hangzhou, China</span><span><a href="products/">Products</a> · <a href="guides/">Guides</a> · <a href="company.html">Company</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div></footer>
+<a class="wafab" href="https://wa.me/8617757312044" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>WhatsApp</span></a>
 </body></html>
