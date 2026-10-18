@@ -30,6 +30,7 @@
 <label style="display:block;font-weight:600;margin-bottom:12px">Product<select id="p" style="display:block;width:100%;margin-top:6px;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit"></select></label>
 <label style="display:block;font-weight:600;margin-bottom:12px">Quantity<input id="q" type="number" min="1" value="1" style="display:block;width:100%;margin-top:6px;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit"></label>
 <label style="display:block;font-weight:600;margin-bottom:12px">Destination port<select id="d" style="display:block;width:100%;margin-top:6px;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit"></select></label>
+<input id="op" placeholder="Your port / city and country, e.g. Lagos, Nigeria" style="display:none;width:100%;margin:-4px 0 12px;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit">
 <p class="note">Not listed (dry-type transformers, compact substations, other ratings or ports)? <a href="quote.html">Request a quote</a>.</p>
 </div>
 <div class="card">
@@ -40,7 +41,7 @@
 </div></div></div></section>
 <script>
 (function(){
-var D=[["Durban, South Africa",5100,6500],["Mombasa, Kenya",3700,5500],["Jebel Ali, UAE",7800,8800],["Jeddah, Saudi Arabia",6800,9500],["Chittagong, Bangladesh",2850,3350]];
+var D=[["Durban, South Africa",5100,6500],["Mombasa, Kenya",3700,5500],["Jebel Ali, UAE",7800,8800],["Jeddah, Saudi Arabia",6800,9500],["Chittagong, Bangladesh",2850,3350],["FOB China only – I arrange freight",0,0,"fob"],["Other port – type it below",0,0,"other"]];
 var ORIGIN=350,P=[],G={gen:"Generator sets",tf:"Transformers",panel:"Switchgear and panels"};
 function $(i){return document.getElementById(i)}
 function f(n){return 'US$ '+Math.round(n).toLocaleString('en-US')}
@@ -56,12 +57,17 @@ function freight(k,q,d){
 }
 function calc(){
   var p=P[$('p').value];if(!p)return;
-  var q=Math.max(1,parseInt($('q').value)||1),d=D[$('d').value];
-  var fob=p.usd*q,fr=freight(p.fc,q,d),rows='<tr><th>Item</th><th>Estimate</th></tr><tr><td>'+p.name+' × '+q+'<br><span class="note">'+p.spec+' · lead time '+p.lead+'</span></td><td>'+f(fob)+' FOB</td></tr>',txt;
+  var q=Math.max(1,parseInt($('q').value)||1),d=D[$('d').value].slice();
+  $('op').style.display=d[3]==='other'?'block':'none';
+  if(d[3]==='other')d[0]=($('op').value.trim()||'your port');
+  var fob=p.usd*q,fr=d[3]?null:freight(p.fc,q,d),rows='<tr><th>Item</th><th>Estimate</th></tr><tr><td>'+p.name+' × '+q+'<br><span class="note">'+p.spec+' · lead time '+p.lead+'</span></td><td>'+f(fob)+' FOB</td></tr>',txt;
   if(fr){var ins=(fob+fr.c)*0.003,cif=fob+fr.c+ins;
     rows+='<tr><td>Ocean freight to '+d[0].split(',')[0]+'<br><span class="note">'+fr.t+'</span></td><td>'+f(fr.c)+'</td></tr><tr><td>Insurance</td><td>'+f(ins)+'</td></tr>';
     $('tot').innerHTML=f(cif)+' CIF<small>'+d[0]+' · about '+f(cif/q)+' per unit</small>';
     txt='- Web estimate: '+f(fob)+' FOB, '+f(cif)+' CIF';
+  } else if(d[3]==='fob'){
+    $('tot').innerHTML=f(fob)+' FOB<small>Loaded on board in Shanghai/Qingdao · about '+f(fob/q)+' per unit</small>';
+    txt='- Web estimate: '+f(fob)+' FOB';
   } else {
     rows+='<tr><td>Ocean freight to '+d[0].split(',')[0]+'</td><td>in your quotation</td></tr>';
     $('tot').innerHTML=f(fob)+' FOB<small>Freight depends on size and weight; we add it in your written quotation</small>';
@@ -80,7 +86,7 @@ fetch('assets/prices.json').then(function(r){return r.json()}).then(function(j){
     $('p').appendChild(og)});
   $('p').value=sel;calc();
 }).catch(function(){$('out').innerHTML='<tr><td>Prices could not load. Please see <a href="products/">Products &amp; prices</a>.</td></tr>'});
-['p','q','d'].forEach(function(i){$(i).addEventListener('input',calc);$(i).addEventListener('change',calc)});
+['p','q','d','op'].forEach(function(i){$(i).addEventListener('input',calc);$(i).addEventListener('change',calc)});
 })();
 </script>
 <footer><div class="wrap"><span>© 2026 SUPPLY BRIDGE ASIA · Hangzhou, China</span><span><a href="products/">Products</a> · <a href="guides/">Guides</a> · <a href="company.html">Company</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div></footer>
