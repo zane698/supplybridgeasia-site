@@ -44,148 +44,42 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-col
 
 <section class="alt"><div class="wrap">
   <div class="kick">Request a quote</div>
-  <h2>Tell us what you need. We typically reply within 24 hours.</h2>
-  <p class="lead">Want a number now? Try the <a href="estimate.html">instant estimate</a> for our standard generator sets. Otherwise choose the equipment, quantity and destination. Your enquiry is written out on the right; send it by WhatsApp or email. Nothing is stored on this page.</p>
-
-  <div class="q">
-  <form id="f" class="card" autocomplete="on" onsubmit="return false">
-    <fieldset>
-      <legend>1. Equipment</legend>
-      <div class="seg">
-        <label><input type="radio" name="prod" value="gs" checked><span>Diesel generator sets</span></label>
-        <label><input type="radio" name="prod" value="tf"><span>Transformers</span></label>
-        <label><input type="radio" name="prod" value="both"><span>Both</span></label>
-        <label><input type="radio" name="prod" value="oth"><span>Substation / switchgear / other</span></label>
-      </div>
-    </fieldset>
-
-    <fieldset id="gsBox">
-      <legend>Generator sets</legend>
-      <div class="row">
-        <label>Rating (prime / standby)<select name="gsRating">
-          <option>100 kW</option><option>300 kW</option><option>500 kW</option><option selected>1,000 / 1,100 kW</option><option>1,500 / 1,650 kW</option><option>Other (state in notes)</option></select></label>
-        <label>Engine<select name="gsEngine">
-          <option>Weichai</option><option>Yuchai</option><option>Shangchai</option><option>Cummins</option><option>Best price, any make</option></select></label>
-      </div>
-      <div class="row">
-        <label>Build<select name="gsBuild"><option>Open frame</option><option>Silent canopy</option><option>40 ft containerized, silent</option></select></label>
-        <label>Voltage / frequency<select name="gsVolt"><option>400 V / 50 Hz</option><option>480 V / 60 Hz</option><option>Other (state in notes)</option></select></label>
-      </div>
-      <div class="row">
-        <label>Quantity (units)<input name="gsQty" type="number" min="1" value="1"></label>
-        <label>Use<select name="gsUse"><option>Prime power</option><option>Standby</option><option>Rental fleet</option><option>Mining</option><option>Resale (distributor)</option></select></label>
-      </div>
-      <label>Extras (optional)<input name="gsExtra" placeholder="ATS, paralleling, remote monitoring…"></label>
-    </fieldset>
-
-    <fieldset id="tfBox" class="hide">
-      <legend>Transformers</legend>
-      <div class="row">
-        <label>Rating<select name="tfKva"><option>630 kVA</option><option>800 kVA</option><option>1,000 kVA</option><option>1,250 kVA</option><option>1,600 kVA</option><option>2,000 kVA</option><option>2,500 kVA</option><option>Other (state in notes)</option></select></label>
-        <label>Primary voltage<select name="tfHv"><option>11 kV</option><option>33 kV</option><option>Other (state in notes)</option></select></label>
-      </div>
-      <div class="row">
-        <label>Secondary voltage<input name="tfLv" value="0.415 kV"></label>
-        <label>Quantity (units)<input name="tfQty" type="number" min="1" value="1"></label>
-      </div>
-      <label>Standard / spec (optional)<input name="tfStd" placeholder="IEC 60076, utility spec, vector group…"></label>
-    </fieldset>
-
-    <fieldset>
-      <legend>2. Delivery</legend>
-      <div class="row">
-        <label>Destination country<input name="country" placeholder="e.g. Nigeria"></label>
-        <label>Port or site<input name="port" placeholder="e.g. Lagos (Apapa)"></label>
-      </div>
-      <div class="row">
-        <label>Price basis<select name="inco"><option>CIF destination port</option><option>FOB Chinese port</option><option>EXW factory</option><option>DAP site</option></select></label>
-        <label>Needed on site by<input name="by" type="month"></label>
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>3. Your details</legend>
-      <div class="row">
-        <label>Name<input name="name" autocomplete="name"></label>
-        <label>Company<input name="company" autocomplete="organization"></label>
-      </div>
-      <div class="row">
-        <label>Email<input name="email" type="email" autocomplete="email"></label>
-        <label>Phone / WhatsApp<input name="phone" autocomplete="tel"></label>
-      </div>
-      <label>Notes (optional)<textarea name="notes" rows="3" placeholder="Project, load profile, anything we should know"></textarea></label>
-    </fieldset>
-  </form>
-
-  <div class="card sticky">
-    <h3>Your enquiry</h3>
-    <div id="preview"></div>
-    <p class="miss" id="miss"></p>
+  <h2>Just tell us what you need. We reply within 24 hours.</h2>
+  <p class="lead">No form to fill. Message us directly:</p>
+  <div class="qq">
+    <a class="btn wa big" href="https://wa.me/8617757312044?text=Hello%20Supply%20Bridge%20Asia%2C%20I%20need%20a%20quote%20for%3A%20" target="_blank" rel="noopener">WhatsApp us<small>+86 177 5731 2044</small></a>
+    <a class="btn big" href="mailto:zane@supplybridgeasia.com?subject=Quote%20request">Email us<small>zane@supplybridgeasia.com</small></a>
+  </div>
+  <div class="card qbox">
+    <label for="need">Or type it here and press send</label>
+    <textarea id="need" rows="4" placeholder="e.g. 2 x 1,000 kW gensets, 400 V 50 Hz, to Lagos"></textarea>
     <div class="acts">
       <a class="btn wa" id="sendWa" href="#" target="_blank" rel="noopener">Send by WhatsApp</a>
       <a class="btn" id="sendMail" href="#">Send by email</a>
-      <button class="btn ghost" id="copy" type="button">Copy</button>
     </div>
-    <p class="ok">We typically reply within 24 hours with price, technical data and lead time. Balance is paid only after you review the factory test evidence.</p>
-  </div>
+    <p class="ok">Size, quantity and country are enough to start. Want a number now? Try the <a href="estimate.html">instant estimate</a>.</p>
   </div>
 </div></section>
+<style>
+.qq{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 22px}
+.btn.big{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 12px;font-size:1.25rem;text-align:center}
+.btn.big small{display:block;font-size:.85rem;font-weight:400;margin-top:6px;opacity:.9;word-break:break-all}
+.qbox label{font-weight:600;display:block;margin-bottom:8px}
+.qbox textarea{width:100%;box-sizing:border-box;font-size:1rem;padding:12px}
+.qbox .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+@media(max-width:600px){.qq{grid-template-columns:1fr}}
+</style>
 
 <footer><div class="wrap"><span>© 2026 SUPPLY BRIDGE ASIA · Hangzhou, China</span><span><a href="products/">Products</a> · <a href="guides/">Guides</a> · <a href="company.html">Company</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div></footer>
 
 <script>
 (function(){
-  try{var q=new URLSearchParams(location.search).get('size');if(q){var n=document.querySelector('[name=notes]');n.value='Sizing tool suggestion: '+q;document.querySelector('input[name=prod][value=both]').checked=true}}catch(e){}
-  var f=document.getElementById('f'),pv=document.getElementById('preview'),miss=document.getElementById('miss');
-  var wa=document.getElementById('sendWa'),ml=document.getElementById('sendMail'),cp=document.getElementById('copy');
-  var gsBox=document.getElementById('gsBox'),tfBox=document.getElementById('tfBox');
-  function v(n){var e=f.elements[n];return e?String(e.value||'').trim():''}
-  function build(){
-    var p=f.querySelector('input[name=prod]:checked').value;
-    gsBox.classList.toggle('hide',p==='tf'||p==='oth');tfBox.classList.toggle('hide',p==='gs'||p==='oth');
-    var L=['Quote request – Supply Bridge Asia',''];
-    if(p==='oth'){L.push('OTHER EQUIPMENT (see notes)');L.push('')}
-    if(p==='gs'||p==='both'){
-      L.push('DIESEL GENERATOR SETS');
-      L.push('- Rating: '+v('gsRating'));
-      L.push('- Engine: '+v('gsEngine'));
-      L.push('- Build: '+v('gsBuild'));
-      L.push('- Voltage: '+v('gsVolt'));
-      L.push('- Use: '+v('gsUse'));
-      L.push('- Quantity: '+(v('gsQty')||'?')+' unit(s)');
-      if(v('gsExtra'))L.push('- Extras: '+v('gsExtra'));
-      L.push('');
-    }
-    if(p==='tf'||p==='both'){
-      L.push('TRANSFORMERS');
-      L.push('- Rating: '+v('tfKva'));
-      L.push('- Voltage: '+v('tfHv')+' / '+(v('tfLv')||'?'));
-      L.push('- Quantity: '+(v('tfQty')||'?')+' unit(s)');
-      if(v('tfStd'))L.push('- Standard: '+v('tfStd'));
-      L.push('');
-    }
-    L.push('DELIVERY');
-    L.push('- Destination: '+[v('port'),v('country')].filter(Boolean).join(', '));
-    L.push('- Price basis: '+v('inco'));
-    if(v('by'))L.push('- Needed on site by: '+v('by'));
-    L.push('');
-    L.push('CONTACT');
-    ['name','company','email','phone'].forEach(function(k){if(v(k))L.push('- '+k.charAt(0).toUpperCase()+k.slice(1)+': '+v(k))});
-    if(v('notes')){L.push('');L.push('Notes: '+v('notes'))}
-    var txt=L.join('\n');pv.textContent=txt;
-    var m=[];if(!v('country'))m.push('destination country');if(!v('name'))m.push('your name');if(!v('company'))m.push('company');
-    miss.textContent=m.length?'Please add: '+m.join(', ')+'.':'';
-    wa.href='https://wa.me/8617757312044?text='+encodeURIComponent(txt);
-    var subj='Quote request'+(v('company')?' – '+v('company'):'')+(v('country')?' – '+v('country'):'');
-    ml.href='mailto:zane@supplybridgeasia.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(txt);
-    return m.length===0;
-  }
-  function guard(e){if(!build()){e.preventDefault();miss.scrollIntoView({block:'center',behavior:'smooth'})}}
-  wa.addEventListener('click',guard);ml.addEventListener('click',guard);
-  cp.addEventListener('click',function(){build();var t=pv.textContent;
-    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){cp.textContent='Copied'},function(){cp.textContent='Select the text to copy'});
-    setTimeout(function(){cp.textContent='Copy'},1800)});
-  f.addEventListener('input',build);f.addEventListener('change',build);build();
+  var t=document.getElementById('need'),wa=document.getElementById('sendWa'),ml=document.getElementById('sendMail');
+  try{var q=new URLSearchParams(location.search).get('size');if(q)t.value='Sizing tool suggestion: '+q}catch(e){}
+  function upd(){var m='Quote request – Supply Bridge Asia\n\n'+(t.value.trim()||'');
+    wa.href='https://wa.me/8617757312044?text='+encodeURIComponent(m);
+    ml.href='mailto:zane@supplybridgeasia.com?subject='+encodeURIComponent('Quote request')+'&body='+encodeURIComponent(m)}
+  t.addEventListener('input',upd);upd();
 })();
 </script>
 <a class="wafab" href="https://wa.me/8617757312044" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>WhatsApp</span></a>
