@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17",
+ "updated": "2026-10-19",
  "note": "FOB China, USD per unit. Generated from the SBA sales-price table (rows marked quotable, price date within 30 days). Do not edit by hand; regenerate from the table.",
  "items": [
   {
@@ -7,8 +7,8 @@
    "cat": "gen",
    "name": "50 kVA Weichai, silent canopy",
    "spec": "50 kVA prime, 400 V, 50 Hz",
-   "usd": 4660,
-   "date": "2026-10-16",
+   "usd": 4100,
+   "date": "2026-10-19",
    "lead": "about 3 weeks",
    "fc": "s",
    "page": "products/weichai-50kva-silent-generator.html"
@@ -18,8 +18,8 @@
    "cat": "gen",
    "name": "50 kVA Yuchai, silent canopy",
    "spec": "50 kVA prime, 400 V, 50 Hz",
-   "usd": 4790,
-   "date": "2026-10-16",
+   "usd": 4580,
+   "date": "2026-10-19",
    "lead": "about 3 weeks",
    "fc": "s",
    "page": "products/yuchai-50kva-silent-generator.html"
@@ -29,8 +29,8 @@
    "cat": "gen",
    "name": "50 kVA Perkins 1103A, Stamford, DSE6120, silent canopy",
    "spec": "50 kVA prime, 400 V, 50 Hz",
-   "usd": 10620,
-   "date": "2026-10-16",
+   "usd": 9350,
+   "date": "2026-10-19",
    "lead": "confirmed in quotation",
    "fc": "s"
   },
@@ -39,8 +39,8 @@
    "cat": "gen",
    "name": "80 kVA Perkins, silent canopy",
    "spec": "80 kVA prime, 400 V, 50 Hz",
-   "usd": 10980,
-   "date": "2026-10-16",
+   "usd": 10060,
+   "date": "2026-10-19",
    "lead": "confirmed in quotation",
    "fc": "s"
   },
@@ -55,22 +55,52 @@
    "fc": "s"
   },
   {
+   "id": "GS-WC-150-OPEN",
+   "cat": "gen",
+   "name": "150 kVA Weichai WP6D152E200, open frame / silent canopy",
+   "spec": "150 kVA (120 kW) prime, 400 V, 50 Hz",
+   "usd": 7320,
+   "date": "2026-10-19",
+   "lead": "1–2 weeks",
+   "fc": "s"
+  },
+  {
    "id": "GS-WC-200-OPEN",
    "cat": "gen",
    "name": "200 kVA Weichai, open frame",
    "spec": "200 kVA prime, 400 V, 50 Hz",
-   "usd": 10980,
-   "date": "2026-10-16",
+   "usd": 10510,
+   "date": "2026-10-19",
    "lead": "about 2 weeks",
    "fc": "s"
+  },
+  {
+   "id": "GS-WC-300-OPEN",
+   "cat": "gen",
+   "name": "300 kVA Weichai WP10D320E200, open frame / silent canopy",
+   "spec": "300 kVA (250 kW) prime, 400 V, 50 Hz",
+   "usd": 11850,
+   "date": "2026-10-19",
+   "lead": "1–2 weeks",
+   "fc": "m"
+  },
+  {
+   "id": "GS-WC-400-OPEN",
+   "cat": "gen",
+   "name": "400 kVA Weichai WP13D405E200, open frame / silent canopy",
+   "spec": "400 kVA (320 kW) prime, 400 V, 50 Hz",
+   "usd": 20200,
+   "date": "2026-10-19",
+   "lead": "1–2 weeks",
+   "fc": "m"
   },
   {
    "id": "GS-WC-500KVA-SILENT",
    "cat": "gen",
    "name": "500 kVA Weichai, Stamford, DSE7320, silent canopy",
    "spec": "500 kVA prime, 400 V, 50 Hz",
-   "usd": 26150,
-   "date": "2026-10-16",
+   "usd": 25020,
+   "date": "2026-10-19",
    "lead": "confirmed in quotation",
    "fc": "m"
   },
@@ -79,10 +109,30 @@
    "cat": "gen",
    "name": "500 kW Weichai, open frame",
    "spec": "500 kW prime, 400 V, 50 Hz",
-   "usd": 29880,
-   "date": "2026-10-16",
+   "usd": 27150,
+   "date": "2026-10-19",
    "lead": "4–6 weeks",
    "fc": "m"
+  },
+  {
+   "id": "GS-YC-800-OPEN",
+   "cat": "gen",
+   "name": "800 kVA Yuchai YCDV240A3H-1100, open frame",
+   "spec": "800 kVA (640 kW) prime, 400 V, 50 Hz",
+   "usd": 39770,
+   "date": "2026-10-19",
+   "lead": "confirmed in quotation",
+   "fc": "l"
+  },
+  {
+   "id": "GS-WC-800-OPEN",
+   "cat": "gen",
+   "name": "800 kVA Weichai 8M33D800E200, open frame / silent canopy",
+   "spec": "800 kVA (640 kW) prime, 400 V, 50 Hz",
+   "usd": 49180,
+   "date": "2026-10-19",
+   "lead": "confirmed in quotation",
+   "fc": "l"
   },
   {
    "id": "GS-YC-1000",
@@ -100,8 +150,8 @@
    "cat": "gen",
    "name": "1,000 kW Shangchai, open frame",
    "spec": "1,000 kW prime, 400 V, 50 Hz",
-   "usd": 68500,
-   "date": "2026-10-16",
+   "usd": 65850,
+   "date": "2026-10-19",
    "lead": "4–6 weeks",
    "fc": "l",
    "page": "products/shangchai-1000kw-diesel-generator.html"
@@ -111,8 +161,8 @@
    "cat": "gen",
    "name": "1,000 kW Weichai, open frame",
    "spec": "1,000 kW prime, 400 V, 50 Hz",
-   "usd": 82820,
-   "date": "2026-10-16",
+   "usd": 70450,
+   "date": "2026-10-19",
    "lead": "4–6 weeks",
    "fc": "l"
   },
@@ -121,8 +171,8 @@
    "cat": "gen",
    "name": "1,000 kW Weichai, 40 ft container",
    "spec": "1,000 kW prime, 400 V, 50 Hz",
-   "usd": 95900,
-   "date": "2026-10-14",
+   "usd": 91730,
+   "date": "2026-10-19",
    "lead": "confirmed in quotation",
    "fc": "l"
   },
@@ -131,8 +181,8 @@
    "cat": "gen",
    "name": "1,000 kW Cummins KTA38, open frame",
    "spec": "1,000 kW prime, 400 V, 50 Hz",
-   "usd": 122840,
-   "date": "2026-10-14",
+   "usd": 117500,
+   "date": "2026-10-19",
    "lead": "about 4 weeks",
    "fc": "l"
   },
@@ -141,8 +191,8 @@
    "cat": "gen",
    "name": "1,500 kW Shangchai, open frame",
    "spec": "1,500 kW prime, 400 V, 50 Hz",
-   "usd": 142000,
-   "date": "2026-10-16",
+   "usd": 127960,
+   "date": "2026-10-19",
    "lead": "8–10 weeks",
    "fc": "x",
    "page": "products/shangchai-1500kw-diesel-generator.html"
@@ -152,8 +202,8 @@
    "cat": "gen",
    "name": "1,500 kW Weichai, open frame",
    "spec": "1,500 kW prime, 400 V, 50 Hz",
-   "usd": 143000,
-   "date": "2026-10-16",
+   "usd": 138600,
+   "date": "2026-10-19",
    "lead": "8–10 weeks",
    "fc": "x",
    "page": "products/weichai-1500kw-diesel-generator.html"
@@ -163,8 +213,8 @@
    "cat": "tf",
    "name": "500 kVA oil-immersed, copper, 11 kV",
    "spec": "11/0.415 kV, 50 Hz, Dyn11",
-   "usd": 6040,
-   "date": "2026-10-12",
+   "usd": 5540,
+   "date": "2026-10-19",
    "lead": "about 3 weeks"
   },
   {
@@ -172,8 +222,8 @@
    "cat": "tf",
    "name": "630 kVA oil-immersed, copper, 11 kV",
    "spec": "11/0.415 kV, 50 Hz, Dyn11",
-   "usd": 6860,
-   "date": "2026-10-16",
+   "usd": 6040,
+   "date": "2026-10-19",
    "lead": "3–5 weeks"
   },
   {
@@ -190,8 +240,8 @@
    "cat": "tf",
    "name": "1,600 kVA oil-immersed, copper, 11 kV",
    "spec": "11/0.415 kV, 50 Hz, Dyn11",
-   "usd": 12250,
-   "date": "2026-10-16",
+   "usd": 10780,
+   "date": "2026-10-19",
    "lead": "3–5 weeks"
   },
   {
@@ -199,8 +249,8 @@
    "cat": "tf",
    "name": "2,500 kVA oil-immersed, copper, 11 kV",
    "spec": "11/0.415 kV, 50 Hz, Dyn11",
-   "usd": 17840,
-   "date": "2026-10-16",
+   "usd": 15100,
+   "date": "2026-10-19",
    "lead": "3–5 weeks"
   },
   {
@@ -208,8 +258,8 @@
    "cat": "tf",
    "name": "630 kVA oil-immersed, copper, 33 kV",
    "spec": "33/0.415 kV, 50 Hz, Dyn11",
-   "usd": 8330,
-   "date": "2026-10-16",
+   "usd": 7330,
+   "date": "2026-10-19",
    "lead": "3–5 weeks"
   },
   {
@@ -217,8 +267,8 @@
    "cat": "tf",
    "name": "1,000 kVA oil-immersed, copper, 33 kV",
    "spec": "33/0.415 kV, 50 Hz, Dyn11",
-   "usd": 12050,
-   "date": "2026-10-16",
+   "usd": 11040,
+   "date": "2026-10-19",
    "lead": "3–5 weeks"
   },
   {
@@ -226,8 +276,8 @@
    "cat": "tf",
    "name": "1,600 kVA oil-immersed, copper, 33 kV",
    "spec": "33/0.415 kV, 50 Hz, Dyn11",
-   "usd": 16090,
-   "date": "2026-10-16",
+   "usd": 14160,
+   "date": "2026-10-19",
    "lead": "3–5 weeks"
   },
   {
@@ -235,8 +285,8 @@
    "cat": "tf",
    "name": "2,500 kVA oil-immersed, copper, 33 kV",
    "spec": "33/0.415 kV, 50 Hz, Dyn11",
-   "usd": 20990,
-   "date": "2026-10-16",
+   "usd": 18480,
+   "date": "2026-10-19",
    "lead": "3–5 weeks"
   },
   {
@@ -244,8 +294,8 @@
    "cat": "tf",
    "name": "630 kVA oil-immersed, aluminium, 11 kV",
    "spec": "11/0.415 kV, 50 Hz, Dyn11",
-   "usd": 3980,
-   "date": "2026-10-16",
+   "usd": 3810,
+   "date": "2026-10-19",
    "lead": "about 3 weeks"
   },
   {
@@ -253,8 +303,8 @@
    "cat": "tf",
    "name": "1,600 kVA oil-immersed, aluminium, 11 kV",
    "spec": "11/0.415 kV, 50 Hz, Dyn11",
-   "usd": 7440,
-   "date": "2026-10-16",
+   "usd": 7120,
+   "date": "2026-10-19",
    "lead": "about 3 weeks"
   },
   {
@@ -262,8 +312,8 @@
    "cat": "tf",
    "name": "2,500 kVA oil-immersed, aluminium, 11 kV",
    "spec": "11/0.415 kV, 50 Hz, Dyn11",
-   "usd": 10000,
-   "date": "2026-10-11",
+   "usd": 9560,
+   "date": "2026-10-19",
    "lead": "3–5 weeks"
   },
   {
@@ -271,8 +321,8 @@
    "cat": "tf",
    "name": "630 kVA oil-immersed, aluminium, 33 kV",
    "spec": "33/0.415 kV, 50 Hz, Dyn11",
-   "usd": 5460,
-   "date": "2026-10-16",
+   "usd": 5220,
+   "date": "2026-10-19",
    "lead": "about 3 weeks"
   },
   {
@@ -280,8 +330,8 @@
    "cat": "tf",
    "name": "1,000 kVA oil-immersed, aluminium, 33 kV",
    "spec": "33/0.415 kV, 50 Hz, Dyn11",
-   "usd": 7220,
-   "date": "2026-10-11",
+   "usd": 6900,
+   "date": "2026-10-19",
    "lead": "3–5 weeks"
   },
   {
@@ -289,8 +339,8 @@
    "cat": "tf",
    "name": "50 kVA pole-mounted, copper, 11 kV",
    "spec": "11/0.4 kV, 50 Hz, Dyn11",
-   "usd": 1520,
-   "date": "2026-10-16",
+   "usd": 1390,
+   "date": "2026-10-19",
    "lead": "about 2 weeks"
   },
   {
@@ -298,8 +348,8 @@
    "cat": "tf",
    "name": "100 kVA pole-mounted, aluminium, 11 kV",
    "spec": "11/0.4 kV, 50 Hz, Dyn11",
-   "usd": 1090,
-   "date": "2026-10-16",
+   "usd": 1000,
+   "date": "2026-10-19",
    "lead": "about 2 weeks"
   },
   {
@@ -307,8 +357,8 @@
    "cat": "tf",
    "name": "200 kVA pole-mounted, copper, 11 kV",
    "spec": "11/0.4 kV, 50 Hz, Dyn11",
-   "usd": 3260,
-   "date": "2026-10-16",
+   "usd": 2990,
+   "date": "2026-10-19",
    "lead": "about 2 weeks"
   },
   {
@@ -316,8 +366,8 @@
    "cat": "tf",
    "name": "200 kVA pole-mounted, aluminium, 11 kV",
    "spec": "11/0.4 kV, 50 Hz, Dyn11",
-   "usd": 2020,
-   "date": "2026-10-16",
+   "usd": 1850,
+   "date": "2026-10-19",
    "lead": "confirmed in quotation"
   },
   {
@@ -325,8 +375,8 @@
    "cat": "tf",
    "name": "2,500 kVA step-up, copper, 0.4/11 kV",
    "spec": "0.4/11 kV, 50 Hz",
-   "usd": 22870,
-   "date": "2026-10-15",
+   "usd": 20130,
+   "date": "2026-10-19",
    "lead": "confirmed in quotation"
   },
   {
@@ -334,17 +384,53 @@
    "cat": "tf",
    "name": "2,500 kVA step-up, copper, 0.4/33 kV",
    "spec": "0.4/33 kV, 50 Hz",
-   "usd": 27290,
-   "date": "2026-10-15",
+   "usd": 24010,
+   "date": "2026-10-19",
    "lead": "about 3–4 weeks"
+  },
+  {
+   "id": "ATS-250A-4P",
+   "cat": "panel",
+   "name": "ATS panel 250 A, 4-pole",
+   "spec": "0.4 kV, 50 Hz",
+   "usd": 550,
+   "date": "2026-10-19",
+   "lead": "about 3 weeks"
+  },
+  {
+   "id": "ATS-400A-4P",
+   "cat": "panel",
+   "name": "ATS panel 400 A, 4-pole (HYT1CII-630/4P)",
+   "spec": "0.4 kV, 50 Hz",
+   "usd": 590,
+   "date": "2026-10-19",
+   "lead": "about 3 weeks"
+  },
+  {
+   "id": "ATS-630A-4P",
+   "cat": "panel",
+   "name": "ATS panel 630 A, 4-pole (HYT1CII-630/4P)",
+   "spec": "0.4 kV, 50 Hz",
+   "usd": 600,
+   "date": "2026-10-19",
+   "lead": "about 3 weeks"
+  },
+  {
+   "id": "SYNC-500KW-PAIR",
+   "cat": "panel",
+   "name": "Synchronizing panels for 2 × 500 kW sets",
+   "spec": "0.4 kV, 50 Hz",
+   "usd": 7120,
+   "date": "2026-10-19",
+   "lead": "confirmed in quotation"
   },
   {
    "id": "ATS-1000A-4P",
    "cat": "panel",
    "name": "ATS panel 1,000 A, 4-pole (for 500 kW set)",
    "spec": "0.4 kV, 50 Hz",
-   "usd": 1100,
-   "date": "2026-10-16",
+   "usd": 930,
+   "date": "2026-10-19",
    "lead": "about 3 weeks"
   },
   {
@@ -352,8 +438,8 @@
    "cat": "panel",
    "name": "ATS panel 2,000 A, 4-pole (for 1,000 kW set)",
    "spec": "0.4 kV, 50 Hz",
-   "usd": 2210,
-   "date": "2026-10-16",
+   "usd": 1870,
+   "date": "2026-10-19",
    "lead": "about 3 weeks"
   },
   {
@@ -361,8 +447,8 @@
    "cat": "panel",
    "name": "Synchronizing panel for 1,000 kW set",
    "spec": "0.4 kV, 50 Hz",
-   "usd": 8820,
-   "date": "2026-10-17",
+   "usd": 7760,
+   "date": "2026-10-19",
    "lead": "confirmed in quotation"
   },
   {
@@ -370,8 +456,8 @@
    "cat": "panel",
    "name": "MNS LV switchboard, 4 panels (2,500 A incomer, 2 feeders, 300 kvar capacitor)",
    "spec": "0.4 kV, 50 Hz",
-   "usd": 16470,
-   "date": "2026-10-17",
+   "usd": 15100,
+   "date": "2026-10-19",
    "lead": "about 3 weeks"
   },
   {
@@ -379,8 +465,8 @@
    "cat": "panel",
    "name": "KYN28-12 metal-clad switchgear, incoming panel, VCB 1,250 A",
    "spec": "12 kV, 50 Hz",
-   "usd": 2940,
-   "date": "2026-10-15",
+   "usd": 2590,
+   "date": "2026-10-19",
    "lead": "confirmed in quotation"
   },
   {
@@ -388,8 +474,8 @@
    "cat": "panel",
    "name": "SF6 ring main unit, 3-way, 630 A, 12 kV",
    "spec": "12 kV, 50 Hz",
-   "usd": 3310,
-   "date": "2026-10-16",
+   "usd": 2800,
+   "date": "2026-10-19",
    "lead": "confirmed in quotation"
   },
   {
@@ -397,8 +483,8 @@
    "cat": "panel",
    "name": "SF6 ring main unit, 3-way, 630 A, 36/40.5 kV",
    "spec": "36/40.5 kV, 50 Hz",
-   "usd": 6540,
-   "date": "2026-10-16",
+   "usd": 5750,
+   "date": "2026-10-19",
    "lead": "confirmed in quotation"
   }
  ]

@@ -28,14 +28,27 @@ GROUPS = [
 ]
 
 def table(cat):
+    # Items sharing a "row" label (e.g. open frame / silent canopy of one model)
+    # are shown as one table row: "US$ open / silent".
     rows = []
-    for it in [i for i in items if i["cat"] == cat]:
-        name = it["name"]
+    done = set()
+    cat_items = [i for i in items if i["cat"] == cat]
+    for it in cat_items:
+        if it.get("row"):
+            if it["row"] in done:
+                continue
+            done.add(it["row"])
+            grp = [i for i in cat_items if i.get("row") == it["row"]]
+            name = it["row"]
+            price = "US$ " + " / ".join("{:,}".format(int(i["usd"])) for i in grp)
+        else:
+            name = it["name"]
+            price = money(it["usd"])
         if it.get("page"):
             name = '<a href="../{}">{}</a>'.format(it["page"], name)
         rows.append(
             "<tr><td>{}</td><td>{}</td><td><b>{}</b></td><td>{}</td><td>{}</td></tr>".format(
-                name, it["spec"], money(it["usd"]), it["lead"], nice_date(it["date"])
+                name, it["spec"], price, it["lead"], nice_date(it["date"])
             )
         )
     return (
