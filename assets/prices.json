@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19",
+ "updated": "2026-10-20",
  "note": "FOB China, USD per unit. Generated from the SBA sales-price table (rows marked quotable, price date within 30 days). Do not edit by hand; regenerate from the table.",
  "items": [
   {
@@ -231,8 +231,8 @@
    "cat": "tf",
    "name": "1,000 kVA oil-immersed, copper, 11 kV",
    "spec": "11/0.415 kV, 50 Hz, Dyn11",
-   "usd": 8340,
-   "date": "2026-10-16",
+   "usd": 8140,
+   "date": "2026-10-20",
    "lead": "3–5 weeks"
   },
   {
@@ -294,8 +294,8 @@
    "cat": "tf",
    "name": "630 kVA oil-immersed, aluminium, 11 kV",
    "spec": "11/0.415 kV, 50 Hz, Dyn11",
-   "usd": 3810,
-   "date": "2026-10-19",
+   "usd": 3190,
+   "date": "2026-10-20",
    "lead": "about 3 weeks"
   },
   {
@@ -303,8 +303,8 @@
    "cat": "tf",
    "name": "1,600 kVA oil-immersed, aluminium, 11 kV",
    "spec": "11/0.415 kV, 50 Hz, Dyn11",
-   "usd": 7120,
-   "date": "2026-10-19",
+   "usd": 5650,
+   "date": "2026-10-20",
    "lead": "about 3 weeks"
   },
   {
@@ -312,8 +312,8 @@
    "cat": "tf",
    "name": "2,500 kVA oil-immersed, aluminium, 11 kV",
    "spec": "11/0.415 kV, 50 Hz, Dyn11",
-   "usd": 9560,
-   "date": "2026-10-19",
+   "usd": 7690,
+   "date": "2026-10-20",
    "lead": "3–5 weeks"
   },
   {
@@ -375,8 +375,8 @@
    "cat": "tf",
    "name": "2,500 kVA step-up, copper, 0.4/11 kV",
    "spec": "0.4/11 kV, 50 Hz",
-   "usd": 20130,
-   "date": "2026-10-19",
+   "usd": 17680,
+   "date": "2026-10-20",
    "lead": "confirmed in quotation"
   },
   {
