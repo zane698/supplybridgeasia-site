@@ -375,7 +375,7 @@
    "cat": "tf",
    "name": "2,500 kVA step-up, copper, 0.4/11 kV",
    "spec": "0.4/11 kV, 50 Hz",
-   "usd": 17680,
+   "usd": 15700,
    "date": "2026-10-20",
    "lead": "confirmed in quotation"
   },
@@ -384,8 +384,8 @@
    "cat": "tf",
    "name": "2,500 kVA step-up, copper, 0.4/33 kV",
    "spec": "0.4/33 kV, 50 Hz",
-   "usd": 24010,
-   "date": "2026-10-19",
+   "usd": 19880,
+   "date": "2026-10-20",
    "lead": "about 3–4 weeks"
   },
   {
