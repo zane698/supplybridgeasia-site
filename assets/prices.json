@@ -31,7 +31,7 @@
    "spec": "50 kVA prime, 400 V, 50 Hz",
    "usd": 10110,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation",
+   "lead": "within about 40 days",
    "fc": "s"
   },
   {
@@ -41,7 +41,7 @@
    "spec": "80 kVA prime, 400 V, 50 Hz",
    "usd": 10880,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation",
+   "lead": "within about 20 days",
    "fc": "s"
   },
   {
@@ -51,7 +51,7 @@
    "spec": "100 kVA prime, 400 V, 50 Hz",
    "usd": 9170,
    "date": "2026-10-16",
-   "lead": "confirmed in quotation",
+   "lead": "within about 20 days",
    "fc": "s"
   },
   {
@@ -99,9 +99,9 @@
    "cat": "gen",
    "name": "500 kVA Weichai, Stamford, DSE7320, silent canopy",
    "spec": "500 kVA prime, 400 V, 50 Hz",
-   "usd": 27050,
+   "usd": 27700,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation",
+   "lead": "within about 40 days",
    "fc": "m"
   },
   {
@@ -121,7 +121,7 @@
    "spec": "800 kVA (640 kW) prime, 400 V, 50 Hz",
    "usd": 43000,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation",
+   "lead": "within about 30 days",
    "fc": "l"
   },
   {
@@ -131,7 +131,7 @@
    "spec": "800 kVA (640 kW) prime, 400 V, 50 Hz",
    "usd": 53180,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation",
+   "lead": "within about 30 days",
    "fc": "l"
   },
   {
@@ -173,7 +173,7 @@
    "spec": "1,000 kW prime, 400 V, 50 Hz",
    "usd": 105000,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation",
+   "lead": "15–20 days",
    "fc": "l"
   },
   {
@@ -368,7 +368,7 @@
    "spec": "11/0.4 kV, 50 Hz, Dyn11",
    "usd": 2260,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation"
+   "lead": "within about 15 days"
   },
   {
    "id": "TF-STEPUP-11-2500",
@@ -377,7 +377,7 @@
    "spec": "0.4/11 kV, 50 Hz",
    "usd": 19110,
    "date": "2026-10-20",
-   "lead": "confirmed in quotation"
+   "lead": "within about 20 days"
   },
   {
    "id": "TF-STEPUP-33-2500",
@@ -422,7 +422,7 @@
    "spec": "0.4 kV, 50 Hz",
    "usd": 7700,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation"
+   "lead": "about 4 weeks"
   },
   {
    "id": "ATS-1000A-4P",
@@ -449,7 +449,7 @@
    "spec": "0.4 kV, 50 Hz",
    "usd": 8400,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation"
+   "lead": "within about 30 days"
   },
   {
    "id": "LV-MNS-4P",
@@ -467,7 +467,7 @@
    "spec": "12 kV, 50 Hz",
    "usd": 3150,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation"
+   "lead": "within about 20 days"
   },
   {
    "id": "RMU-SF6-11-3U",
