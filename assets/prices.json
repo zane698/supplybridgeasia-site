@@ -99,7 +99,7 @@
    "cat": "gen",
    "name": "500 kVA Weichai, Stamford, DSE7320, silent canopy",
    "spec": "500 kVA prime, 400 V, 50 Hz",
-   "usd": 27700,
+   "usd": 27050,
    "date": "2026-10-19",
    "lead": "confirmed in quotation",
    "fc": "m"
@@ -476,7 +476,7 @@
    "spec": "12 kV, 50 Hz",
    "usd": 3030,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation"
+   "lead": "about 1 week"
   },
   {
    "id": "RMU-SF6-33-3U",
@@ -485,7 +485,7 @@
    "spec": "36/40.5 kV, 50 Hz",
    "usd": 6220,
    "date": "2026-10-19",
-   "lead": "confirmed in quotation"
+   "lead": "about 10 days"
   }
  ]
 }
